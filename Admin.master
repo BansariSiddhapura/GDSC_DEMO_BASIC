@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 433px;
+        }
+        .auto-style2 {
+            width: 11%;
+            height: 86%;
+        }
+        .auto-style3 {
+            width: 72%;
+            height: 86%;
+        }
+        .auto-style4 {
+            height: 16%;
+        }
+        .auto-style5 {
+            width: 11%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="height:690px">
+        <table style="width:100%;height:100%" border="2">
+            <tr style="width:100%; ">
+                <td class="auto-style5" style="background-color: #FFFFCC">
+                <asp:Image ID="Image1" runat="server" Height="123px" ImageUrl="~/img/1.jpg" Width="227px"
+                     BorderColor="#FFCC00" BorderWidth="2px" />
+                </td>
+                <td colspan="2" align="center" style="font-style: normal; font-size: 40px; 
+color: #000099; background-color: #FFFFCC" class="auto-style4">Online sarees hub</td>
+            </tr>
+            <tr style="width:100%; height:70%;">
+                <td style="vertical-align:top; text-align:center; font-size: x-large; background-color: #3399FF;" class="auto-style2">
+                    <table>
+                        <tr>
+                            <td class="auto-style1">
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <asp:LinkButton ID="btnAddPro" runat="server" PostBackUrl="AddProduct.aspx" CausesValidation="false" OnClick="btnAddPro_Click">
+                                    Add Product</asp:LinkButton>
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style1">
+                                <asp:LinkButton ID="btnAddCat" runat="server" PostBackUrl="AddCategory.aspx" CausesValidation="false" OnClick="btnAddCat_Click">
+                                    Add Category</asp:LinkButton>
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style1">
+                                <asp:LinkButton ID="btnupdate" runat="server" PostBackUrl="UpdateProduct.aspx" CausesValidation="false" OnClick="btnupdate_Click">
+                                  Update Product</asp:LinkButton>
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style1">
+                                <asp:LinkButton ID="btnfeed" runat="server" PostBackUrl="AdminFeedback.aspx" CausesValidation="false" OnClick="btnfeed_Click">
+                                    FeedBack</asp:LinkButton>
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style1">
+                                <asp:LinkButton ID="btnlogout" runat="server" PostBackUrl="#" CausesValidation="false" OnClick="btnlogout_Click" >
+                                    logOut</asp:LinkButton>
+                                <br />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="auto-style3">
+                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr style="width:100%; height:15%;">
+                <td colspan="2" valign="bottom" align="center" style="color: #FFFFFF; font-size: 30px; background-color: #000000">All rights reserved by me my self &copy; &reg;</td>
+            </tr>
+        </table>
+
+       
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="_Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Sarees shop</title>
+    <style type="text/css">
+        .all {
+            background-color:green;
+            border-radius:0% 50% 50% 0% / 0% 50% 50% 0%;
+
+            position:relative;
+            bottom:20px;
+            left:1px;
+            text-align:left;
+            color:white;
+            float:left;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:white">
+    <form id="form1" runat="server">
+    <div>
+        <table style="width:1200px; margin:0 auto;  background-color:white">
+
+            <tr style="width:110px; height:50px;  background-color:pink;">
+                <td>
+                <asp:Image ID="Image1" runat="server" Height="100px" ImageUrl="~/img/1.jpg" Width="150px"
+                     BorderColor="#FFCC00" BorderWidth="2px" />
+                </td>
+
+                <td style="width:740px" align="center">
+                    <asp:Label ID="Label1" runat="server" Text="Online Sarees Center" 
+                        Font-Bold="True" Font-Names="Copperplate Gothic Bold" ForeColor="#000099" 
+                        Font-Size="35px"></asp:Label>
+                    <br /><b>for those who loves sarees.....!</b>
+                </td>
+                <td style="width:230px; text-align:right">
+                    <asp:ImageButton ID="ImageButton4" runat="server" Height="50px"  ImageUrl="~/img/2.jpg"
+                         Width="50px" CausesValidation="False" OnClick="ImageButton4_Click" />
+                    <asp:Label ID="Label2" runat="server" Text="Label" Font-Bold="True" Font-Size="X-Large" 
+                        ForeColor="#FFFFCC"></asp:Label>
+                </td>
+           </tr>
+
+            <!--navigation -->
+
+            <tr style="width:1100px; height:40px; background-color:darkblue">
+                <td colspan="3" style="text-align:right">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal"
+                         StaticSubMenuIndent="19px">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="All Products" Value="all Products" NavigateUrl="AllSarees.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Registration" Value="Registration" NavigateUrl="Reg.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="User Login" Value="User Login" NavigateUrl="Login.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="About Us" Value="About Us" ></asp:MenuItem>
+                            <asp:MenuItem Text="contact us" Value="Contact us"></asp:MenuItem>
+                        </Items>
+
+                        <StaticHoverStyle BackColor="#99FF33" BorderColor="#CC6699" BorderStyle="Outset" 
+                            ForeColor="White" Height="40px" />
+                        <StaticMenuItemStyle Font-Bold="True" Font-Size="Large" HorizontalPadding="54px" 
+                            ForeColor="white" />
+                        <StaticSelectedStyle BackColor="#33CCFF" BorderColor="#CC66FF" BorderStyle="Inset" 
+                            ForeColor="#CC0066" Height="40px" />
+
+                    </asp:Menu>
+
+                   
+                    </td>
+                
+                    
+                
+            </tr>
+
+            <!-- banner
+            <tr style="width:1110px; height:310px;">
+                <td colspan="3">
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+
+                    </asp:ScriptManager>
+
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <asp:Timer ID="Timer1" runat="server" Interval="2000" OnTick="Timer1_Tick"></asp:Timer>
+                            <asp:Image ID="Image2" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Double" 
+                                Height="270px" Width="1140px" ImageAlign="Middle" />
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </td>
+            </tr>-->
+
+
+
+
+
+
+
+        <!--your content   -->
+            <tr>
+                <td colspan="3">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+
+        <!-- footer-->
+            <tr style="width:1100px; height:25px; background-color:black; text-align:center; color:white">
+                <td colspan="3">
+                    &copy; all rights are reserved.2022
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
